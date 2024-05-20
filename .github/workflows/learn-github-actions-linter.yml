@@ -1,17 +1,17 @@
-name: Super-Duper-Linter
+name: Super-Linter
 
 on: push
 
 jobs: 
   super-lint:
-    name: Lint ze code base, d'uh
+    name: Lint code base
     runs-on: ubuntu-latest
     steps:
-      - name: We be checking out the code
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Super-Duper-Linter
-        uses: github/super-linter@v3
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
         env: 
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
